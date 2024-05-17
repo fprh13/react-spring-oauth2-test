@@ -1,24 +1,35 @@
-import logo from './logo.svg';
 import './App.css';
+
+const onNaverLogin = () => {
+  window.location.href = 'http://localhost:8080/oauth2/authorization/naver';
+};
+
+const onKakaoLogin = () => {
+  window.location.href = 'http://localhost:8080/oauth2/authorization/kakao';
+};
+const onGoogleLogin = () => {
+  window.location.href = 'http://localhost:8080/oauth2/authorization/google';
+};
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <h1>CARUMUCH 카우머치 테스트</h1>
+      <div className="wrapper">
+        <img src="./pedro.png" className="pedro"></img>
+      </div>
+      <h1>OAuth2 Login & SignUp 🔐</h1>
+
+      <button onClick={onNaverLogin} className="naver">
+        Naver
+      </button>
+      <button onClick={onKakaoLogin} className="kakao">
+        Kakao
+      </button>
+      <button onClick={onGoogleLogin} className="google">
+        Google
+      </button>
+    </>
   );
 }
 
